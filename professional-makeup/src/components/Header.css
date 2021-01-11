@@ -1,0 +1,11 @@
+
+.header{
+   background-color: #e9c5c7;
+}
+.foto{
+    width: 20em;
+    height: 5em;
+    background-image: url(../images/profesional.png);
+    background-size: cover;
+    border:  #e9c5c7;
+}

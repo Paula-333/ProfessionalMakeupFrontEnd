@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.cardBody{
+    background-color: #f8f2f0;
+    color: #883f4f;
+    border: 1px solid #e9c5c7;;
+}

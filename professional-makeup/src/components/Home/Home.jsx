@@ -1,11 +1,14 @@
 import React from 'react';
-import {Carousel, Container} from 'react-bootstrap';
+import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 import './Home.css';
-//import '../../images/';
+
+
 
 
 function ControlledCarousel() {
+
+
     const [index, setIndex] = useState(0);
   
     const handleSelect = (selectedIndex, e) => {
@@ -14,61 +17,46 @@ function ControlledCarousel() {
   
     return (
      <>
-     <Container fluid className={"d-flex align-content-center mt-5 container"}>
-     <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://i.pinimg.com/564x/c7/25/19/c72519b4b7753670c86d7219b3fe09d6.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>MAQUILLAJE DE NOVIA</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://i.pinimg.com/564x/18/5a/e3/185ae331b2a80fdd581b6456b4bedd42.jpg"
-            alt="Second slide"
-          />
-  
-          <Carousel.Caption>
-            <h3>MAQUILLAJE PARA GRADUACIÓN</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://i.pinimg.com/564x/e5/d8/72/e5d872dce2724f314fb93b6d0406f2a3.jpg"
-            alt="Third slide"
-          />
-  
-          <Carousel.Caption>
-            <h3>MAQUILLAJE EVENTO DE DIA</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://i.pinimg.com/564x/21/70/cb/2170cbd3d3f0442713acc2cd5a435c9a.jpg"
-            alt="Third slide"
-          />
-  
-          <Carousel.Caption>
-            <h3>MAQUILLAJE EVENTO DE NOCHE</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-     </Container>
+        <Container className={"container"}>
+            <Carousel style={{width: '30vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://i.pinimg.com/564x/fa/b6/df/fab6dfc42108055c29481643f67065e3.jpg"
+                    alt="First slide"
+                />
+                </Carousel.Item>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://i.pinimg.com/564x/2f/e3/80/2fe38050ece704e9f9890f7f19716656.jpg"
+                    alt="Second slide"
+                />
+                </Carousel.Item>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://i.pinimg.com/564x/6b/66/26/6b662664366a9b832bc46f94d986f179.jpg"
+                    alt="Third slide"
+                />
+                </Carousel.Item>
+            </Carousel>
+            <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
+                    <Card.Body>
+                        <Card.Title><h3>¿Quienes somos?</h3></Card.Title>
+                            <Card.Text>
+                            <br/>
+                            Professional Makeup Artist es una empresa de profesionales del mundo de la imagen que ofrece servicios de Maquillaje profesional para particulares.
+                            <br/>
+                            <br/>
+                            Contamos con varios profesionales que cubren todas las especialidades del mundo de la moda, la belleza, para que te sientas la persona mas especial.
+                            </Card.Text>
+                        
+                        <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}}>Servicios</Button>
+                        
+                    </Card.Body>
+                </Card>
+        </Container>
      </>
     );
   }

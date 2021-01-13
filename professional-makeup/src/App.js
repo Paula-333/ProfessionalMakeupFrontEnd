@@ -22,6 +22,7 @@ function App() {
         <Route path="/home" component={ControlledCarousel} exact/>
         <Route path="/login" component={Login} exact/>
         <Route path="/signup" component={SignUp} exact/>
+        <Route path="/services" component={SignUp} exact/>
       </Switch>
       
     </BrowserRouter>

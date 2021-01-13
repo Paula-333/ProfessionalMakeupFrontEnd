@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Welcome from './components/Welcome/Welcome';
 import ControlledCarousel from './components/Home/Home';
 import Login from './containers/Login';
@@ -24,6 +25,8 @@ function App() {
         <Route path="/signup" component={SignUp} exact/>
         <Route path="/services" component={SignUp} exact/>
       </Switch>
+
+      <Footer></Footer>
       
     </BrowserRouter>
 

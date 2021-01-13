@@ -1,13 +1,10 @@
 import React from 'react';
 import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
+
 import './Home.css';
 
-
-
-
-function ControlledCarousel() {
-
+const Home = () => {
 
     const [index, setIndex] = useState(0);
   
@@ -22,21 +19,28 @@ function ControlledCarousel() {
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.pinimg.com/564x/fa/b6/df/fab6dfc42108055c29481643f67065e3.jpg"
+                    src="/images/IMG_7613.jpg"
                     alt="First slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.pinimg.com/564x/2f/e3/80/2fe38050ece704e9f9890f7f19716656.jpg"
+                    src="/images/IMG_7619.jpg"
                     alt="Second slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://i.pinimg.com/564x/6b/66/26/6b662664366a9b832bc46f94d986f179.jpg"
+                    src="/images/IMG_7620.jpg"
+                    alt="Third slide"
+                />
+                </Carousel.Item>
+                <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="/images/IMG_7628.jpg"
                     alt="Third slide"
                 />
                 </Carousel.Item>
@@ -62,4 +66,4 @@ function ControlledCarousel() {
   }
   
   //render(<ControlledCarousel />);
-  export default ControlledCarousel
+  export default Home;

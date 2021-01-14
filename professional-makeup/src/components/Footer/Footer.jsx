@@ -9,10 +9,10 @@ const Footer = () => {
     return (
        
         <>
-            <Navbar className={"mt-5"} style={{backgroundColor: '#e9c5c7'}}>
+            <Navbar className={"mt-5"} style={{backgroundColor: '#883f4f'}}>
 
                 <Navbar.Collapse  className="justify-content-center">
-                <Navbar.Brand style={{ color: '#883f4f'}}>Contacto: professsionalmakeupartist@gmail.com</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}}>Contacto: professsionalmakeupartist@gmail.com</Navbar.Brand>
                 </Navbar.Collapse>
 
             </Navbar>

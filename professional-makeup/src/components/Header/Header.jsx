@@ -9,18 +9,18 @@ const Header = () => {
     return (
        
         <>
-            <Navbar style={{backgroundColor: '#e9c5c7'}}>
+            <Navbar style={{backgroundColor: '#883f4f'}}>
               
-                <Navbar.Brand href="/home" className="logo"><img  alt="" src="/images/profesional.jpg"></img></Navbar.Brand>
+                <Navbar.Brand href="/home" className="logo"><img  alt="" src="/images/logo.jpg"></img></Navbar.Brand>
 
                 <Navbar.Collapse  className="justify-content-center">
-                <Navbar.Brand style={{ color: '#883f4f'}} href="/services">Servicios</Navbar.Brand>
-                <Navbar.Brand style={{ color: '#883f4f'}} href="/gallery">Nuestros Trabajos</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/services">Servicios</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/gallery">Nuestro Trabajo</Navbar.Brand>
                 </Navbar.Collapse>
 
                 <Navbar.Collapse  className="justify-content-end">
-                <Navbar.Brand style={{ color: '#883f4f'}} href="/login" >Login</Navbar.Brand>
-                <Navbar.Brand style={{ color: '#883f4f'}}href="/signup" >Sign Up</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#faebe5'}} href="/login" >Login</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#faebe5'}}href="/signup" >Sign Up</Navbar.Brand>
                 </Navbar.Collapse>
 
             </Navbar>

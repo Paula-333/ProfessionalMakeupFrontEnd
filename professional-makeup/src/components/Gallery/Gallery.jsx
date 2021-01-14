@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Col, Row, Image} from 'react-bootstrap';
+
 //import {useState} from 'react';
 
 
@@ -58,8 +59,9 @@ const Gallery = () => {
         </Col>
           
         </Row>
-        
+       
       </Container>
+     
     )
 }
 

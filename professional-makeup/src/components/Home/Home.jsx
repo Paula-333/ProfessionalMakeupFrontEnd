@@ -46,17 +46,24 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
             <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
-                    <Card.Body>
-                        <Card.Title><h3>¿Quienes somos?</h3></Card.Title>
+                    <Card.Body style={{ backgroundColor:'#faebe5'}}>
+                        <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quienes somos?</h2></Card.Title>
                             <Card.Text>
                             <br/>
                             Professional Makeup Artist es una empresa de profesionales del mundo de la imagen que ofrece servicios de Maquillaje profesional para particulares.
                             <br/>
                             <br/>
-                            Contamos con varios profesionales que cubren todas las especialidades del mundo de la moda, la belleza, para que te sientas la persona mas especial.
+                            Contamos con varios profesionales varios profesionales con diferentes especialidades para cubrir todas las modalidades de maquillaje según el trabajo a realizar.
+                            <br/>
+                            <br/>
+                            Con sede en Madrid y Barcelona, aunque trabajamos en todas las zonas de España. Tenemos disponibilidad para viajar.
                             </Card.Text>
                         
-                        <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}}>Servicios</Button>
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Servicios</Button>
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/gallery">Trabajos</Button>
+
+                    <Card.Text style={{ color:'#883f4f'}} >Contacto: professionalmakeupartist@gmail.com</Card.Text>
+
                         
                     </Card.Body>
                 </Card>

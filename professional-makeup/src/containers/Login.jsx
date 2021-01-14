@@ -24,7 +24,7 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type={"password"} required/>
                         </Form.Group>
-                        <Button style={{ backgroundColor:'#883f4f'}} className={"w-100 botonPrimario"} type={"submit"}>Login</Button>
+                        <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} className={"w-100 botonPrimario"} type={"submit"}>Login</Button>
                     </Form>
                     
                 </Card.Body>

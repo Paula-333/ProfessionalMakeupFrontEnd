@@ -12,6 +12,7 @@ import SignUp from './containers/SignUp';
 import WeddingPage from './containers/WeddingPage';
 import EventPage from './containers/EventPage';
 import PromPage from './containers/PromPage';
+import PhotoshootPage from './containers/PhotoshootPage';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/wedding-page" component={WeddingPage} exact/>
         <Route path="/event-page" component={EventPage} exact/>
         <Route path="/prom-page" component={PromPage} exact/>
+        <Route path="/photoshoot-page" component={PhotoshootPage} exact/>
       </Switch>
 
       <Footer/>

@@ -11,7 +11,7 @@ const Footer = () => {
         <>
             <Navbar className={"mt-5"} style={{backgroundColor: '#e9c5c7'}}>
 
-                <Navbar.Collapse  className="justify-content-end">
+                <Navbar.Collapse  className="justify-content-center">
                 <Navbar.Brand style={{ color: '#883f4f'}}>Contacto: professsionalmakeupartist@gmail.com</Navbar.Brand>
                 </Navbar.Collapse>
 

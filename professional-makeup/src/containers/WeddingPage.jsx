@@ -15,7 +15,7 @@ const WeddingPage = () => {
     return (
      <>
         <Container className={"container"}>
-            <Carousel style={{width: '30vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
+            <Carousel style={{width: '50vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -38,19 +38,21 @@ const WeddingPage = () => {
                 />
                 </Carousel.Item>
             </Carousel>
-            <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
+            <Card className={"text-center mt-5"} style={{ width: '50rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE PARA NOVIA</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text className="text">
                             <br/>
                             El maquillaje de novia siempre es personalizado, buscando un maquillaje favorecedor acorde con el estilo y gusto de la novia.
-                            
+                            <br/>
                             Antes del día de la boda se recomienda hacer una prueba de maquillaje, un mes antes aproximadamente, donde se escogen las tonalidades, intensidades y productos a utilizar, donde junto con nuestro asesoramiento la novia es la que decide el resultado final del maquillaje.
-
+                            <br/>
                             El maquillaje de novia es un maquillaje muy trabajado y perfeccionista donde a pesar de que en muchas ocasiones es natural, se aplican productos específicos que favorecen la fijación y el resultado final del maquillaje, siendo muy resistente, a prueba de sudor y por supuesto ¡lágrimas!
+                            <br/>
                             </Card.Text>
                         
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Pide Cita</Button>
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/">Pide Cita</Button>
                     </Card.Body>
                 </Card>
         </Container>

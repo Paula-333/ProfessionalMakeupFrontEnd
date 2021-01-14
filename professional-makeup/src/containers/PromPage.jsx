@@ -40,15 +40,17 @@ const PromPage = () => {
             <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE PARA GRADUACIÓN</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text className="text">
                             <br/>
-                            El maquillaje de novia siempre es personalizado, buscando un maquillaje favorecedor acorde con el estilo y gusto de la novia.
-                            
-                            Antes del día de la boda se recomienda hacer una prueba de maquillaje, un mes antes aproximadamente, donde se escogen las tonalidades, intensidades y productos a utilizar, donde junto con nuestro asesoramiento la novia es la que decide el resultado final del maquillaje.
-
-                            El maquillaje de novia es un maquillaje muy trabajado y perfeccionista donde a pesar de que en muchas ocasiones es natural, se aplican productos específicos que favorecen la fijación y el resultado final del maquillaje, siendo muy resistente, a prueba de sudor y por supuesto ¡lágrimas!
+                            ¡Qué ilusión, después de tantos años de esfuerzo y dedicación, por fin ha llegado tu Gala de Graduación!
+                            <br/>
+                            ¡Pues has dado con el sitio adecuado! En Professional Makeup Artist, tenemos en cuenta tus gustos, así como el «outfit» y los complementos que hayas elegido llevar, a la hora de elaborar tu maquillaje.
+                            <br/>
+                            Utilizamos los mejores productos y las mejores técnicas de aplicación, para que el maquillaje se conserve impecable todo el día.
+                            <br/>
                             </Card.Text>
-                        
+
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Pide Cita</Button>
                     </Card.Body>
                 </Card>

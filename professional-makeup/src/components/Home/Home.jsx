@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel, Container, Card, Button} from 'react-bootstrap';
+import {Carousel, Container, Card, Button, Image} from 'react-bootstrap';
 import {useState} from 'react';
 
 import './Home.css';
@@ -14,12 +14,13 @@ const Home = () => {
   
     return (
      <>
-        <Container className={"container"}>
-            <Carousel style={{width: '30vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
+       <Container>
+       <Container className={"container"}>
+            <Carousel style={{width:'30vw'}}  className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7641.jpg"
+                    src="/images/IMG_7638.jpg"
                     alt="First slide"
                 />
                     <Carousel.Caption>
@@ -57,32 +58,37 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
+        </Container>
+        <Container>
+        <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quienes somos?</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text className="text">
                             <br/>
                             Professional Makeup Artist es una empresa de profesionales del mundo de la imagen que ofrece servicios de Maquillaje profesional para particulares.
                             <br/>
-                            <br/>
                             Contamos con varios profesionales varios profesionales con diferentes especialidades para cubrir todas las modalidades de maquillaje según el trabajo a realizar.
                             <br/>
-                            <br/>
                             Con sede en Madrid y Barcelona, aunque trabajamos en todas las zonas de España. Tenemos disponibilidad para viajar.
+                            <br/>
                             </Card.Text>
-                        
+                            <Card.Text>
+                            Trabajamos con: 
+                            <ul>
+                                <Card.Link href="https://www.nyxcosmetics.es/" style={{ color:'#883f4f'}}>NYX PROFESSIONAL ARTIST</Card.Link> 
+                            </ul>
+                            <br/>
+                            </Card.Text>
+                            
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Servicios</Button>
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/gallery">Trabajos</Button>
 
-                    <Card.Text style={{ color:'#883f4f'}} >Contacto: professionalmakeupartist@gmail.com</Card.Text>
-
-                        
                     </Card.Body>
                 </Card>
         </Container>
+       </Container>
      </>
     );
   }
   
-  //render(<ControlledCarousel />);
-  export default Home;
+export default Home;

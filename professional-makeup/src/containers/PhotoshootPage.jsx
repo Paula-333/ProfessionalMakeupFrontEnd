@@ -41,17 +41,19 @@ const PhotoshootPage = () => {
             <Card className={"text-center mt-5"} style={{ width: '35rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE DE FOTOGRAFÍA</h2></Card.Title>
-                            <Card.Text>
+                            <Card.Text className="text">
                             <br/>
                             El maquillaje de fotografía abarca muchos campos como fotografía de moda, publicidad, catálogos o books de modelo, incluyendo también el maquillaje de hombre.
-                            
+                            <br/>
                             Se puede representar con diferentes maquillajes desde el más natural al más sofisticado. En el maquillaje para fotografía podemos permitirnos una imagen mas recargada y sofisticada, ya que el resultado final no es el que vemos al natural, sino que a través de la fotografía se pierde mucho la intensidad del maquillaje.
-                           
+                            <br/>
                             Es un buen medio para representar un maquillaje de belleza fantasía, que será un maquillaje de belleza llevado a la exageración, a menudo adornado con estilismos y complementos al maquillaje.
-
+                            <br/>
+                            Si es lo que necesitas no dudes en pedir tu cita.
 
                             </Card.Text>
-                        
+
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>  
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Pide Cita</Button>
                     </Card.Body>
                 </Card>

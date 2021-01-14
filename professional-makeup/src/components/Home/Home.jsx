@@ -19,9 +19,12 @@ const Home = () => {
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7613.jpg"
+                    src="/images/IMG_7641.jpg"
                     alt="First slide"
                 />
+                    <Carousel.Caption>
+                        <h3>Maquillaje para Novia</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
@@ -29,6 +32,9 @@ const Home = () => {
                     src="/images/IMG_7619.jpg"
                     alt="Second slide"
                 />
+                <Carousel.Caption>
+                        <h3>Maquillaje para Eventos</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
@@ -36,6 +42,9 @@ const Home = () => {
                     src="/images/IMG_7620.jpg"
                     alt="Third slide"
                 />
+                <Carousel.Caption>
+                        <h3>Maquillaje para Graduación</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
@@ -43,6 +52,9 @@ const Home = () => {
                     src="/images/IMG_7628.jpg"
                     alt="Third slide"
                 />
+                <Carousel.Caption>
+                        <h3>Maquillaje de Fotografía</h3>
+                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             <Card className={"text-center mt-5"} style={{ width: '30rem' }}>

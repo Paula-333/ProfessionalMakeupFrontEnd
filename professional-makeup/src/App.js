@@ -8,6 +8,7 @@ import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Services from './components/Services/Services';
 import Gallery from './components/Gallery/Gallery';
+import WeddingPage from './containers/WeddingPage';
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" component={SignUp} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>
+        <Route path="/wedding-page" component={WeddingPage} exact/>
       </Switch>
 
       <Footer/>

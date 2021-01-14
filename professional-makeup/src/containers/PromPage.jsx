@@ -3,7 +3,7 @@ import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 
 
-const EventPage = () => {
+const PromPage = () => {
 
     const [index, setIndex] = useState(0);
   
@@ -18,28 +18,28 @@ const EventPage = () => {
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7617.jpg"
+                    src="/images/IMG_7641.jpg"
                     alt="First slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7619.jpg"
+                    src="/images/IMG_7643.jpg"
                     alt="Second slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7622.jpg"
+                    src="/images/IMG_7620.jpg"
                     alt="Third slide"
                 />
                 </Carousel.Item>
             </Carousel>
             <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
-                        <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE PARA EVENTOS</h2></Card.Title>
+                        <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE PARA GRADUACIÓN</h2></Card.Title>
                             <Card.Text>
                             El maquillaje de novia siempre es personalizado, buscando un maquillaje favorecedor acorde con el estilo y gusto de la novia.
 
@@ -57,4 +57,4 @@ const EventPage = () => {
   }
   
   //render(<ControlledCarousel />);
-  export default EventPage;
+  export default PromPage;

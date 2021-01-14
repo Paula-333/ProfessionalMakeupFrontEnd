@@ -4,11 +4,14 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Login from './containers/Login';
-import SignUp from './containers/SignUp';
 import Services from './components/Services/Services';
 import Gallery from './components/Gallery/Gallery';
+
+import Login from './containers/Login';
+import SignUp from './containers/SignUp';
 import WeddingPage from './containers/WeddingPage';
+import EventPage from './containers/EventPage';
+import PromPage from './containers/PromPage';
 
 import './App.css';
 
@@ -27,6 +30,8 @@ function App() {
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>
         <Route path="/wedding-page" component={WeddingPage} exact/>
+        <Route path="/event-page" component={EventPage} exact/>
+        <Route path="/prom-page" component={PromPage} exact/>
       </Switch>
 
       <Footer/>

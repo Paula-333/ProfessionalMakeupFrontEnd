@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel, Container, Card, Button, Image} from 'react-bootstrap';
+import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 
 import './Home.css';
@@ -17,11 +17,12 @@ const Home = () => {
        <Container>
        <Container className={"container"}>
             <Carousel style={{width:'30vw'}}  className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
-                <Carousel.Item>
+                <Carousel.Item >
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7638.jpg"
+                    src="/images/IMG_7641.jpg"
                     alt="First slide"
+                    
                 />
                     <Carousel.Caption>
                         <h3>Maquillaje para Novia</h3>
@@ -60,7 +61,7 @@ const Home = () => {
             </Carousel>
         </Container>
         <Container>
-        <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
+        <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quienes somos?</h2></Card.Title>
                             <Card.Text className="text">

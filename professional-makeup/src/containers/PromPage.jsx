@@ -18,21 +18,21 @@ const PromPage = () => {
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7641.jpg"
+                    src="/images/IMG_7620.jpg"
                     alt="First slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7643.jpg"
+                    src="/images/IMG_7618.jpg"
                     alt="Second slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7620.jpg"
+                    src="/images/IMG_7634.jpg"
                     alt="Third slide"
                 />
                 </Carousel.Item>

@@ -11,7 +11,7 @@ const Login = () => {
 
         <Container className={"d-flex align-content-center mt-5 container"}>
             <div className="w100" style={{maxWidth: '100vw'}}>
-            <Card >
+            <Card style={{ width: '16rem' }}>
                 <Card.Body className="cardBody">
                     <h2 className={"text-center"}>Login</h2>
 

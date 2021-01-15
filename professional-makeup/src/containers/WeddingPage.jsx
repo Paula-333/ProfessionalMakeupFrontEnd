@@ -15,30 +15,23 @@ const WeddingPage = () => {
     return (
      <>
         <Container className={"container"}>
-            <Carousel style={{width: '50vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
+            <Carousel style={{width: '30vw'}} className={"mt-5"} activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7638.jpg"
+                    src="/images/IMG_7641.jpg"
                     alt="First slide"
                 />
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/images/IMG_7640.jpg"
+                    src="/images/IMG_7643.jpg"
                     alt="Second slide"
                 />
                 </Carousel.Item>
-                <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="/images/IMG_7639.jpg"
-                    alt="Third slide"
-                />
-                </Carousel.Item>
             </Carousel>
-            <Card className={"text-center mt-5"} style={{ width: '50rem' }}>
+            <Card className={"text-center mt-5"} style={{ width: '30rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
                         <Card.Title style={{ color:'#883f4f'}} ><h2>MAQUILLAJE PARA NOVIA</h2></Card.Title>
                             <Card.Text className="text">

@@ -7,8 +7,9 @@ const SignUp = () => {
       
     return (
         <>
-
+        <h4>!CREA TU CUENTA PARA PODER PEDIR TU CITA CON NOSOTROS!</h4>
         <Container className={"d-flex align-content-center mt-5 container"}>
+            
             <div className="w100" style={{maxWidth: '100vw'}}>
             <Card>
                 <Card.Body className="cardBody">

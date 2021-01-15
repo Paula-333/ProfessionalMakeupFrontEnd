@@ -45,7 +45,7 @@ const WeddingPage = () => {
                             </Card.Text>
                         
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/">Pide Cita</Button>
+                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>
                     </Card.Body>
                 </Card>
         </Container>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar} from 'react-bootstrap';
+import {Navbar, Dropdown, DropdownButton} from 'react-bootstrap';
 //import {Link} from 'react-router-dom';
 
 import './Header.css';
@@ -19,8 +19,13 @@ const Header = () => {
                 </Navbar.Collapse>
 
                 <Navbar.Collapse  className="justify-content-end">
-                <Navbar.Brand style={{ color: '#faebe5'}} href="/login" >Login</Navbar.Brand>
-                <Navbar.Brand style={{ color: '#faebe5'}}href="/signup" >Sign Up</Navbar.Brand>
+                    <DropdownButton variant="outline-light"  id="dropdown-basic-button" title="MENU">
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/home">Home</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/login">Login</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/signup">Sign Up</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/profile">Perfil</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/appointment">Cita</Dropdown.Item>
+                    </DropdownButton>
                 </Navbar.Collapse>
 
             </Navbar>

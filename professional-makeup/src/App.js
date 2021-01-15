@@ -9,6 +9,7 @@ import Gallery from './components/Gallery/Gallery';
 
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
+import Profile from './containers/Profile';
 import Appointment from './containers/Appointment';
 import WeddingPage from './containers/WeddingPage';
 import EventPage from './containers/EventPage';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/home" component={Home} exact/>
         <Route path="/login" component={Login} exact/>
         <Route path="/signup" component={SignUp} exact/>
+        <Route path="/profile" component={Profile} exact/>
         <Route path="/appointment" component={Appointment} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>

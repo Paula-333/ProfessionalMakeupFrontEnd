@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Card, Button} from "react-bootstrap";
 
-import './Services.css'
+import './style.scss'
 
 
 const Services = () => {

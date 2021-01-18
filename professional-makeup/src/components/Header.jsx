@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar, Dropdown, DropdownButton} from 'react-bootstrap';
 //import {Link} from 'react-router-dom';
 
-import './Header.css';
+import './style.scss';
 
 const Header = () => {
       

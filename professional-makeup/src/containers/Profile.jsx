@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Table} from "react-bootstrap";
 
-import './styles.css';
+import './styles.scss';
 
 const Profile = () => {
     return (

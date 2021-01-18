@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './components/Home/Home';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Services from './components/Services/Services';
-import Gallery from './components/Gallery/Gallery';
+import Home from './components/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
 
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
@@ -16,7 +16,7 @@ import EventPage from './containers/EventPage';
 import PromPage from './containers/PromPage';
 import PhotoshootPage from './containers/PhotoshootPage';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

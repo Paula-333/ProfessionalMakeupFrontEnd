@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Card, Form, Button} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './styles.css';
+import './styles.scss';
 
 const SignUp = () => {
       

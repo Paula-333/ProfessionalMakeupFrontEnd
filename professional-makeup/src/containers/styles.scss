@@ -1,0 +1,20 @@
+
+$nudePink: #e9c5c7;
+$darkPink: #883f4f;
+$withePink: #faebe5;
+$white: #f7ece8;
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.cardBody{
+    background-color: $withePink;
+    color: $darkPink;
+
+}
+
+.text{
+    text-align: justify;
+}

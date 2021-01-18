@@ -2,7 +2,7 @@ import React from 'react';
 import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 
-import './Home.css';
+
 
 const Home = () => {
 
@@ -63,12 +63,12 @@ const Home = () => {
         <Container>
         <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
-                        <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quienes somos?</h2></Card.Title>
+                        <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quiénes somos?</h2></Card.Title>
                             <Card.Text className="text">
                             <br/>
                             Professional Makeup Artist es una empresa de profesionales del mundo de la imagen que ofrece servicios de Maquillaje profesional para particulares.
                             <br/>
-                            Contamos con varios profesionales varios profesionales con diferentes especialidades para cubrir todas las modalidades de maquillaje según el trabajo a realizar.
+                            Contamos con varios profesionales con diferentes especialidades para cubrir todas las modalidades de maquillaje según el trabajo a realizar.
                             <br/>
                             Con sede en Madrid y Barcelona, aunque trabajamos en todas las zonas de España. Tenemos disponibilidad para viajar.
                             <br/>

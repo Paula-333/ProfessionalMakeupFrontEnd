@@ -1,7 +1,7 @@
 import React from 'react';
-import {Container, Card, Form, Button, InputGroup, FormControl} from 'react-bootstrap';
+import {Container, Card, Form, Button} from 'react-bootstrap';
 //import {useState} from 'react';
-import './styles.css'
+import './styles.scss'
 
 
 const Appointment = () => {

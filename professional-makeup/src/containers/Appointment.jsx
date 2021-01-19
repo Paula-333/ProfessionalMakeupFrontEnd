@@ -21,7 +21,7 @@ const Appointment = () => {
                         </Form.Group>
                         <Form.Group id={"hour"}>
                             <Form.Label>Hora</Form.Label>
-                            <Form.Control type={"hour"} required/>
+                            <Form.Control type={"time"} required/>
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Seleciona el tipo de maquillaje:</Form.Label>

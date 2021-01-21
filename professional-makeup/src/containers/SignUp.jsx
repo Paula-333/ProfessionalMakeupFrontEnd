@@ -8,20 +8,19 @@ const SignUp = () => {
     const history = useHistory();
 
     const handleSubmit = async (event) => {
-
+        console.log('registrado')
         try {
             event.preventDefault();
-            const form = event.target;
+            //const form = event.target;
             const user = {
-                name: form.name.value,
-                email: form.email.value,
-                password: form.password.value,
-            }
-            
+                name: event.target.name.value,
+                email: event.target.email.value,
+                password: event.target.password.value,
+            };
+            console.log(user);
             //const url = "http://127.0.0.1:8001/api/auth/signup"
             
-            await axios.post('http://127.0.0.1:8001/api/auth/signup',user)
-            console.log(user);
+            await axios.post('http://127.0.0.1:8002/api/auth/signup',user)
             console.log({message: 'Registrado'})
             history.push('/login')
         } catch (error) {
@@ -41,19 +40,24 @@ const SignUp = () => {
                     <h2 className={"text-center"}>Sign Up</h2>
 
                     <Form className="form" onSubmit={handleSubmit}>
-                        <Form.Group id={"name"}>
-                            <Form.Label>Nombre</Form.Label>
-                            <Form.Control type="name" required/>
+                        <Form.Group  id={"name"}>
+                            <Form.Label> Nombre</Form.Label>
+                            <br/>
+                            <input className="input" type="text" name="name" required />
                         </Form.Group>
                         <Form.Group id={"email"}>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" required/>
+                            <br/>
+                            <input className="input" type="email" name="email" required />
+                            
                         </Form.Group>
                         <Form.Group id={"password"}>
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" required/>
+                            <br/>
+                            <input className="input" type="password" name="password" required />
+                            
                         </Form.Group>
-                        <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} className={"w-100 botonPrimario"} type={"submit"}>Sign Up</Button>
+                        <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} className={"w-100 botonPrimario"} type="submit">Sign Up</Button>
                     </Form>
 
                 </Card.Body>

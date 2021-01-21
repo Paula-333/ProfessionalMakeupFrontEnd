@@ -1,6 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { useState } from 'react';
+//import axios from 'axios';
+
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -19,6 +22,24 @@ import PhotoshootPage from './containers/PhotoshootPage';
 import './App.scss';
 
 function App() {
+  /*const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token){
+
+      axios.get('http://localhost:3000',{headers:{Authorization:token}})
+      .then(res=>setUser(res.data))
+    }
+  }, [])*/
+  let initialUser = null;
+  try {
+    initialUser = JSON.parse(localStorage.getItem('user'));
+  } catch (error) {
+    console.error(error)
+  }
+  const [user, setUser] = useState(initialUser);
+  
   return (
     <div className="App">
     
@@ -28,7 +49,9 @@ function App() {
 
       <Switch>
         <Route path="/" component={Home} exact/>
-        <Route path="/login" component={Login} exact/>
+        <Route path="/login" component={Login} exact>
+        <Login user={user} setUser={setUser}/>
+        </Route>
         <Route path="/signup" component={SignUp} exact/>
         <Route path="/profile" component={Profile} exact/>
         <Route path="/appointment" component={Appointment} exact/>

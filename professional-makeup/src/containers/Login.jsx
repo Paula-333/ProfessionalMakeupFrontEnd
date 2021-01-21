@@ -6,16 +6,14 @@ import './styles.scss';
 
 const Login = (props) => {
     const [email, setEmail] = useState('')
-
     const [password, setPassword] = useState('');
-
     const history = useHistory();
 
     const handleSubmit = async (event) => {
 
         try {
             event.preventDefault();
-            const url = "http://127.0.0.1:8001/api/auth/login"
+            const url = "http://127.0.0.1:8002/api/auth/login"
             const res = await axios.post(url, {email,password})
             localStorage.setItem('token',res.data.token)
             

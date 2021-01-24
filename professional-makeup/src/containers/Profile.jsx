@@ -26,7 +26,6 @@ const Profile = (props) => {
             
             <Container style={{width: '50vw'}} className={"mt-5"}>
            
-            
            <Table style={{ backgroundColor:'#faebe5', color:'#883f4f'}} striped bordered hover variant="light">
            <thead>
                <tr>

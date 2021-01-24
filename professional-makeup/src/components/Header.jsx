@@ -6,10 +6,12 @@ import './style.scss';
 
 const Header = (props) => {
     const history = useHistory();
-    const logout = (props)=>{
+    const logout = ()=>{
         localStorage.removeItem('token');
         history.push("/gallery");
     }
+    props.setUser()
+    let email = localStorage.getItem('email');
 
     return (
        
@@ -18,24 +20,33 @@ const Header = (props) => {
               
                 <Navbar.Brand href="/" className="logo"><img  alt="" src="/images/logo.jpg"></img></Navbar.Brand>
 
+                {email?
+                    <>
+
                 <Navbar.Collapse  className="justify-content-center">
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/services">Servicios</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/gallery">Nuestro Trabajo</Navbar.Brand>
                 </Navbar.Collapse>
                 
                 <Navbar.Collapse>
-                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/profile">Perfil</Navbar.Brand>
-                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/appointment">Pedir Cita</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/profile" >Perfil</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/appointment" >Pedir Cita</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} onClick={logout} >Logout</Navbar.Brand>
                 </Navbar.Collapse>
-
-                <Navbar.Collapse  className="justify-content-end">
+                    </>:
+                    <>
+                    <Navbar.Collapse  className="justify-content-end">
                     <DropdownButton variant="outline-light"  id="dropdown-basic-button" title="MENU">
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/">Home</Dropdown.Item>
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/login">Login</Dropdown.Item>
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/signup">Sign Up</Dropdown.Item>
                     </DropdownButton>
                 </Navbar.Collapse>
+                    </>
+                }       
+                
+
+                
 
             </Navbar>
 

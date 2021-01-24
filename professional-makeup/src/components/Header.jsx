@@ -5,18 +5,22 @@ import {useHistory} from 'react-router-dom';
 import './style.scss';
 
 const Header = (props) => {
+
     const history = useHistory();
-    const logout = ()=>{
-        localStorage.removeItem('token');
-        history.push("/gallery");
-    }
+
     props.setUser()
     let email = localStorage.getItem('email');
+
+    const logout = ()=>{
+        localStorage.clear();
+        props.setUser(null)
+        history.push("/");
+    }
 
     return (
        
         <>
-            <Navbar style={{backgroundColor: '#883f4f'}}>
+            <Navbar id="header" style={{backgroundColor: '#883f4f'}}>
               
                 <Navbar.Brand href="/" className="logo"><img  alt="" src="/images/logo.jpg"></img></Navbar.Brand>
 
@@ -35,6 +39,10 @@ const Header = (props) => {
                 </Navbar.Collapse>
                     </>:
                     <>
+                    <Navbar.Collapse  className="justify-content-center">
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/services">Servicios</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} href="/gallery">Nuestro Trabajo</Navbar.Brand>
+                </Navbar.Collapse>
                     <Navbar.Collapse  className="justify-content-end">
                     <DropdownButton variant="outline-light"  id="dropdown-basic-button" title="MENU">
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/">Home</Dropdown.Item>

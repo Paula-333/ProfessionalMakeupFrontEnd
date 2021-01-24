@@ -53,7 +53,7 @@ function App() {
         <Route path="/" component={Home} exact/>
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} component={Login} exact></Route>
         <Route path="/signup" component={SignUp} exact/>
-        <Route path="/profile" children={<Profile user={user} setUser={setUser}/>} component={Profile} exact></Route>
+        <Route path="/profile" component={Profile} exact><Profile user={user} setUser={setUser}/></Route>
         <Route path="/appointment" component={Appointment} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>

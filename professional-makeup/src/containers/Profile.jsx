@@ -1,14 +1,24 @@
+import axios from 'axios';
 import React from 'react';
 import {Container, Table} from "react-bootstrap";
 
 import './styles.scss'
 
 const Profile = (props) => {
-    //const [user, setUser] = useState(null);
-
+    
     props.setUser()
-
     let email = localStorage.getItem('email');
+
+    const getProfile = async () => {
+
+      try{
+        let idUser = localStorage.getItem('user_id');
+        const res = await axios.get(`http://127.0.0.1:8000/api/auth/user/${idUser}`);
+        console.log(res);
+      } catch{
+        console.log({message: 'ERROR'})
+      }
+    }
  
     return (    
         
@@ -16,10 +26,10 @@ const Profile = (props) => {
             <Container>
                 {email?
                     <>
-                        <span className="email">{email}</span>
+                        <span className="email" >{email}</span>
                     </>:
                     <>
-                        <span>hola</span>
+                        <span>No estas logueado</span>
                     </>
                 }       
         </Container>
@@ -38,7 +48,7 @@ const Profile = (props) => {
            <tbody>
                <tr>
                    <td>1</td>
-                   <td>Mark</td>
+                   <td>{getProfile}</td>
                    <td>Otto</td>
                    <td>@mdo</td>
                </tr>

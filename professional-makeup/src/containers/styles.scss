@@ -8,6 +8,10 @@ $white: #f7ece8;
     display: flex;
     justify-content: center;
 }
+.profile{
+    display: flex;
+    flex-direction: column;
+}
 
 .cardBody{
     background-color: $withePink;

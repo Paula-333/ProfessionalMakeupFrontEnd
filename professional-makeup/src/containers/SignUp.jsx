@@ -20,7 +20,7 @@ const SignUp = () => {
             console.log(user);
             //const url = "http://127.0.0.1:8001/api/auth/signup"
             
-            await axios.post('http://127.0.0.1:8002/api/auth/signup',user)
+            await axios.post('http://127.0.0.1:8000/api/auth/signup',user)
             console.log({message: 'Registrado'})
             history.push('/login')
         } catch (error) {

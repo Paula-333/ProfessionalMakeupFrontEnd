@@ -4,6 +4,7 @@ import { Container, Card, Form, Button} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import './styles.scss';
 
+
 const Login = (props) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
@@ -13,12 +14,11 @@ const Login = (props) => {
 
         try {
             event.preventDefault();
-            const url = "http://127.0.0.1:8002/api/auth/login"
+            const url = "http://127.0.0.1:8000/api/auth/login"
             const res = await axios.post(url, {email,password})
-            localStorage.setItem('token',res.data.token)
-            
-            props.setUser(res.data.user)
-            history.push('/')
+            localStorage.setItem('token',res.data.access_token)
+            localStorage.setItem('email', email);      
+            history.push('/profile')
         } catch (error) {
             console.log('ERROR')
            
@@ -37,11 +37,13 @@ const Login = (props) => {
                     <Form className="form" onSubmit={handleSubmit}>
                         <Form.Group id={"email"}>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type={"email"} onChange={event=>setEmail(event.target.value)} value={email} required/>
+                            <br/>
+                            <input onChange={event=>setEmail(event.target.value)} value={email} className="input" type="email" name="email" required/>
                         </Form.Group>
                         <Form.Group id={"password"}>
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type={"password"} onChange={event=>setPassword(event.target.value)}  value={password}  required/>
+                            <br/>
+                            <input onChange={event=>setPassword(event.target.value)}  value={password}   className="input" type="password" name="password" required />
                         </Form.Group>
                         <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} className={"w-100 botonPrimario"} type={"submit"}>Login</Button>
                     </Form>

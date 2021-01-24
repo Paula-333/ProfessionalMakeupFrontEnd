@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import { useState } from 'react';
-//import axios from 'axios';
+import { useState, useEffect} from 'react';
+import axios from 'axios';
 
 import Home from './components/Home';
 import Header from './components/Header';
@@ -22,7 +22,7 @@ import PhotoshootPage from './containers/PhotoshootPage';
 import './App.scss';
 
 function App() {
-  /*const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -31,29 +31,29 @@ function App() {
       axios.get('http://localhost:3000',{headers:{Authorization:token}})
       .then(res=>setUser(res.data))
     }
-  }, [])*/
-  let initialUser = null;
+  }, [])
+  
+  /*let initialUser = null;
   try {
     initialUser = JSON.parse(localStorage.getItem('user'));
   } catch (error) {
     console.error(error)
   }
-  const [user, setUser] = useState(initialUser);
+  const [user, setUser] = useState(initialUser);*/
   
   return (
+    
     <div className="App">
     
      <BrowserRouter>
 
-     <Header/>
+     <Header user={user} setUser={setUser}/>
 
       <Switch>
         <Route path="/" component={Home} exact/>
-        <Route path="/login" component={Login} exact>
-        <Login user={user} setUser={setUser}/>
-        </Route>
+        <Route path="/login" children={<Login user={user} setUser={setUser}/>} component={Login} exact></Route>
         <Route path="/signup" component={SignUp} exact/>
-        <Route path="/profile" component={Profile} exact/>
+        <Route path="/profile" children={<Profile user={user} setUser={setUser}/>} component={Profile} exact></Route>
         <Route path="/appointment" component={Appointment} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>

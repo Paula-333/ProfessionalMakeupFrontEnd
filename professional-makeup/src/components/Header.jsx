@@ -1,12 +1,16 @@
 import React from 'react';
 import {Navbar, Dropdown, DropdownButton} from 'react-bootstrap';
-//import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 import './style.scss';
 
-const Header = () => {
+const Header = (props) => {
+    const history = useHistory();
+    const logout = (props)=>{
+        localStorage.removeItem('token');
+        history.push("/gallery");
+    }
 
-      
     return (
        
         <>
@@ -17,8 +21,12 @@ const Header = () => {
                 <Navbar.Collapse  className="justify-content-center">
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/services">Servicios</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/gallery">Nuestro Trabajo</Navbar.Brand>
+                </Navbar.Collapse>
+                
+                <Navbar.Collapse>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/profile">Perfil</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/appointment">Pedir Cita</Navbar.Brand>
+                <Navbar.Brand style={{ color: '#e9c5c7'}} onClick={logout} >Logout</Navbar.Brand>
                 </Navbar.Collapse>
 
                 <Navbar.Collapse  className="justify-content-end">
@@ -26,8 +34,6 @@ const Header = () => {
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/">Home</Dropdown.Item>
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/login">Login</Dropdown.Item>
                         <Dropdown.Item style={{ color: '#883f4f'}} href="/signup">Sign Up</Dropdown.Item>
-                        <Dropdown.Item style={{ color: '#883f4f'}} href="/profile">Perfil</Dropdown.Item>
-                        <Dropdown.Item style={{ color: '#883f4f'}} href="/appointment">Cita</Dropdown.Item>
                     </DropdownButton>
                 </Navbar.Collapse>
 

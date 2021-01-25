@@ -18,7 +18,7 @@ const Login = (props) => {
             const res = await axios.post(url, {email,password})
             localStorage.setItem('token',res.data.access_token)
             localStorage.setItem('email', email);      
-            history.push('/profile')
+            history.push('/')
         } catch (error) {
             console.log('ERROR')
            

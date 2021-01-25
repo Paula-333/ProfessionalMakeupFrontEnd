@@ -22,7 +22,7 @@ import PhotoshootPage from './containers/PhotoshootPage';
 import './App.scss';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -57,10 +57,10 @@ function App() {
         <Route path="/appointment" component={Appointment} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>
-        <Route path="/wedding-page" component={WeddingPage} exact/>
-        <Route path="/event-page" component={EventPage} exact/>
-        <Route path="/prom-page" component={PromPage} exact/>
-        <Route path="/photoshoot-page" component={PhotoshootPage} exact/>
+        <Route path="/wedding-page" children={<EventPage user={user} setUser={setUser}/>} component={WeddingPage} exact/>
+        <Route path="/event-page"  children={<EventPage user={user} setUser={setUser}/>} component={EventPage} exact/>
+        <Route path="/prom-page" children={<EventPage user={user} setUser={setUser}/>} component={PromPage} exact/>
+        <Route path="/photoshoot-page" children={<EventPage user={user} setUser={setUser}/>} component={PhotoshootPage} exact/>
       </Switch>
 
       <Footer/>

@@ -10,6 +10,17 @@ const Login = (props) => {
     const [password, setPassword] = useState('');
     const history = useHistory();
 
+    const getEmail = async ()=>{
+        try{
+            let email = localStorage.getItem('email');
+            const res = await axios.get(`http://127.0.0.1:8000/api/auth/user/${email}`);
+            console.log(res);
+            localStorage.setItem('user_id', res.data[0].id);
+        }catch (error) {
+            console.log({message: 'ERROR'})
+        }
+    }
+
     const handleSubmit = async (event) => {
 
         try {
@@ -17,7 +28,8 @@ const Login = (props) => {
             const url = "http://127.0.0.1:8000/api/auth/login"
             const res = await axios.post(url, {email,password})
             localStorage.setItem('token',res.data.access_token)
-            localStorage.setItem('email', email);      
+            localStorage.setItem('email', email);   
+            getEmail();   
             history.push('/')
         } catch (error) {
             console.log('ERROR')

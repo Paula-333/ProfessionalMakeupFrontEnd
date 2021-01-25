@@ -1,15 +1,19 @@
 import React from 'react';
-import {Carousel, Container, Card, Button} from 'react-bootstrap';
+import {Carousel, Container, Card, Button, Alert} from 'react-bootstrap';
 import {useState} from 'react';
 
 
-const EventPage = () => {
+const EventPage = (props) => {
+
+    props.setUser()
+    let email = localStorage.getItem('email');
 
     const [index, setIndex] = useState(0);
   
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
+    
   
     return (
      <>
@@ -52,9 +56,18 @@ const EventPage = () => {
                             Utilizaremos productos de alta calidad para garantizar resultados perfectos y larga duración del maquillaje para que no tengas que preocuparte de nada más que de disfrutar el momento.
                             <br/>
                             </Card.Text>
-
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>
+                            {email?
+                                <>
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>
+                                </>:
+                                <>
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment" disabled>Pide Cita 
+                        
+                                </Button>
+                                </>
+                            }       
                     </Card.Body>
                 </Card>
         </Container>

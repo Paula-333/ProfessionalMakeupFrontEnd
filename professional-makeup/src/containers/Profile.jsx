@@ -11,15 +11,20 @@ const Profile = (props) => {
 
     const[dataProfile, setDataProfile]= useState([]);
 
+   const getProfile = async () => {
+        
+        let userId = localStorage.getItem('user_id');
+        const res = await axios.get(`http://127.0.0.1:8000/api/auth/profile/${userId}`)
+        console.log(res)
+       // .then(res=>{setDataProfile(res.data)})
+        //.catch(console.log('ERROR'))
+        setDataProfile(res.data)
+    }
+
     useEffect (()=>{
         getProfile();
-    })
+    },[])
    
-   const getProfile = async () => {
-        let userId = localStorage.getItem('user_id');
-        axios.get(`http://127.0.0.1:8000/api/auth/profile/${userId}`)
-        .then(res=>{setDataProfile(res.data)});
-    }
    /* 
    
    const datosPerfil =  localStorage.getItem('datosPerfil');
@@ -45,7 +50,7 @@ const Profile = (props) => {
             <Container>
                 {email?
                     <>
-                        <span className="email" >{email}</span>
+                        <span className="email" >Su email: {email}</span>
                     </>:
                     <>
                         <span>No estas logueado</span>
@@ -57,9 +62,9 @@ const Profile = (props) => {
             <Table style={{ backgroundColor:'#faebe5', color:'#883f4f'}} striped bordered hover variant="light">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>Nombre</th>
-                    <th>Cita</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
                     <th>Maquillaje</th>
                 </tr>
             </thead>
@@ -67,10 +72,11 @@ const Profile = (props) => {
                 {dataProfile.map((m, i) => {
                 return (
                     <tr key={i}>
+                        <td>{m.name}</td>
                         <td>{m.date}</td>
                         <td>{m.hour}</td>
                         <td>{m.makeup_name}</td>
-                        <td>{m.name}</td>
+                        
                     </tr>
                 )
             })}

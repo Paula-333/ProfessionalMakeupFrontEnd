@@ -3,13 +3,15 @@ import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 
 
-const PromPage = () => {
+const PromPage = (props) => {
 
     const [index, setIndex] = useState(0);
   
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
+    props.setUser()
+    let email = localStorage.getItem('email');
   
     return (
      <>
@@ -50,8 +52,18 @@ const PromPage = () => {
                             <br/>
                             </Card.Text>
 
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>
-                    <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>
+                            {email?
+                                <>
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>
+                                </>:
+                                <>
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
+                                <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment" disabled>Pide Cita 
+                        
+                                </Button>
+                                </>
+                            }       
                     </Card.Body>
                 </Card>
         </Container>

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import axios from 'axios';
-
+import './App.scss'
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -57,10 +57,10 @@ function App() {
         <Route path="/appointment" component={Appointment} exact/>
         <Route path="/services" component={Services} exact/>
         <Route path="/gallery" component={Gallery} exact/>
-        <Route path="/wedding-page" children={<EventPage user={user} setUser={setUser}/>} component={WeddingPage} exact/>
+        <Route path="/wedding-page" children={<WeddingPage user={user} setUser={setUser}/>} component={WeddingPage} exact/>
         <Route path="/event-page"  children={<EventPage user={user} setUser={setUser}/>} component={EventPage} exact/>
-        <Route path="/prom-page" children={<EventPage user={user} setUser={setUser}/>} component={PromPage} exact/>
-        <Route path="/photoshoot-page" children={<EventPage user={user} setUser={setUser}/>} component={PhotoshootPage} exact/>
+        <Route path="/prom-page" children={<PromPage user={user} setUser={setUser}/>} component={PromPage} exact/>
+        <Route path="/photoshoot-page" children={<PhotoshootPage user={user} setUser={setUser}/>} component={PhotoshootPage} exact/>
       </Switch>
 
       <Footer/>

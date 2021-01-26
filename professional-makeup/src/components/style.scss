@@ -4,8 +4,13 @@ $darkPink: #883f4f;
 $withePink: #faebe5;
 $white: #f7ece8;
 
+
 #header{
-    cursor: pointer!important;
+    cursor: pointer;
+}
+
+.text{
+    text-align: justify;
 }
 
 #dropdown-basic-button{

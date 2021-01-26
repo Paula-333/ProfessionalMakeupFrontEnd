@@ -1,7 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { Container, Card, Form, Button} from "react-bootstrap";
+<<<<<<< HEAD
 import { Link, useHistory } from "react-router-dom";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9
 import './styles.scss';
 
 const SignUp = () => {

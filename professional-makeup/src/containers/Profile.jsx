@@ -2,7 +2,11 @@ import axios from 'axios';
 import React, { useState, useEffect} from 'react';
 import {Container, Table} from "react-bootstrap";
 
+<<<<<<< HEAD
 import './styles.scss'
+=======
+import './styles.scss';
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9
 
 const Profile = (props) => {
     

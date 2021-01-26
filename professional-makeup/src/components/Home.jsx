@@ -4,6 +4,10 @@ import {Carousel, Container, Card, Button} from 'react-bootstrap';
 import {useState} from 'react';
 import './style.scss'
 
+<<<<<<< HEAD:professional-makeup/src/components/Home.jsx
+=======
+
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9:professional-makeup/src/components/Home/Home.jsx
 
 const Home = () => {
 
@@ -64,6 +68,7 @@ const Home = () => {
         <Container>
         <Card className={"text-center mt-5"} style={{ width: '40rem' }}>
                     <Card.Body style={{ backgroundColor:'#faebe5'}}>
+<<<<<<< HEAD:professional-makeup/src/components/Home.jsx
                         <Card.Title style={{ color:'#883f4f'}} ><h2>¿QUIÉNES SOMOS?</h2></Card.Title>
                             <Card.Text className="text">
                                 <br/>
@@ -73,6 +78,17 @@ const Home = () => {
                                 <br/>
                                     Con sede en Madrid y Barcelona, aunque trabajamos en todas las zonas de España. Tenemos disponibilidad para viajar.
                                 <br/>
+=======
+                        <Card.Title style={{ color:'#883f4f'}} ><h2>¿Quiénes somos?</h2></Card.Title>
+                            <Card.Text className="text">
+                            <br/>
+                            Professional Makeup Artist es una empresa de profesionales del mundo de la imagen que ofrece servicios de Maquillaje profesional para particulares.
+                            <br/>
+                            Contamos con varios profesionales con diferentes especialidades para cubrir todas las modalidades de maquillaje según el trabajo a realizar.
+                            <br/>
+                            Con sede en Madrid y Barcelona, aunque trabajamos en todas las zonas de España. Tenemos disponibilidad para viajar.
+                            <br/>
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9:professional-makeup/src/components/Home/Home.jsx
                             </Card.Text>
                             <Card.Text>
                                 <ul>

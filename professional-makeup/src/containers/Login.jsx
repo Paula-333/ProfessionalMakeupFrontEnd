@@ -2,6 +2,7 @@
 import React, {useState } from 'react';
 import axios from 'axios';
 import { Container, Card, Form, Button} from "react-bootstrap";
+<<<<<<< HEAD
 import { Link, useHistory } from "react-router-dom";
 import './styles.scss';
 
@@ -23,6 +24,10 @@ const Login = (props) => {
     }
 
     const handleSubmit = async (event) => {
+=======
+import { Link } from "react-router-dom";
+import './styles.scss';
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9
 
         try {
             event.preventDefault();

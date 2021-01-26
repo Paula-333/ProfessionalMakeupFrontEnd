@@ -1,8 +1,13 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import axios from 'axios';
 import {Container, Card, Form, Button} from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
+=======
+import {Container, Card, Form, Button} from 'react-bootstrap';
+//import {useState} from 'react';
+>>>>>>> 646694ad9f03ed48372f882e31ff8d94c84e73d9
 import './styles.scss'
 
 

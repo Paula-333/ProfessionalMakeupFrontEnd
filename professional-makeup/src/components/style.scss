@@ -1,0 +1,22 @@
+$nudePink: #e9c5c7;
+$darkPink: #883f4f;
+$withePink: #faebe5;
+$white: #f7ece8;
+
+
+#header{
+    cursor: pointer;
+}
+
+.text{
+    text-align: justify;
+}
+
+#dropdown-basic-button{
+    background-color: $darkPink;
+     color: $withePink;
+ }
+
+.border-card{
+    border: 3px solid $nudePink;
+}

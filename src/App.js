@@ -4,13 +4,13 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { useState, useEffect, Fragment} from 'react';
 import axios from 'axios';
 import './App.scss'
-
+//IMPORTAR COMPONENTES
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
-
+//IMPORTAR CONTAINERS
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Profile from './containers/Profile';
@@ -24,8 +24,7 @@ import './App.scss';
 
 function App() {
   const [user, setUser] = useState();
-  
-  //const [isLoged, setIsLoged] = useState(true)
+
   useEffect(() => {
     const token = localStorage.getItem('access_token');
   
@@ -40,17 +39,6 @@ function App() {
     
   }, [])
 
-  
-
- // const handleLogin = () => {
-   // if (isLoged){
-     //   setIsLoged(true)
-       // console.log(isLoged)
-   // } else {
-     //   setIsLoged(false)
-    //}
-//}
-  
   
   return (
     

@@ -38,7 +38,7 @@ Pedir cita
 Botón Pedir Cita en las páginas de los maquillajes habilitados
 ![Getting Started](./images/habilitado.png)
 
-##### Puedes deployar la app aqui -> 
+##### Puedes deployar la app aqui -> https://professionalmakeupartist-web.herokuapp.com/
 
 #### Autor:
 Paula Martín Sánchez

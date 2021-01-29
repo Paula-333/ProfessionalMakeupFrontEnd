@@ -17,7 +17,7 @@ const Header = (props) => {
     const logout = ()=>{
         localStorage.clear();
         props.setUser(null)
-        history.push("/"); 
+        history.push("/login"); 
     }
 
     return (

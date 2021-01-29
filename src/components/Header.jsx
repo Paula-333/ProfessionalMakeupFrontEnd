@@ -3,7 +3,6 @@ import {Navbar, Dropdown, DropdownButton } from 'react-bootstrap';
 import {useHistory} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-
 import './style.scss';
 
 const Header = (props) => {
@@ -11,12 +10,13 @@ const Header = (props) => {
     const history = useHistory();
     const location = useLocation();
     console.log(location)
+
     let email = localStorage.getItem('email');
     console.log(email)
 
     const logout = ()=>{
         localStorage.clear();
-        props.setUser(null)
+        props.setUser(null);
         history.push("/login"); 
     }
 
@@ -24,6 +24,7 @@ const Header = (props) => {
        
         <>
         {console.log('renderizando')}
+
             <Navbar id="header" style={{backgroundColor: '#883f4f'}}>
               
                 <Navbar.Brand href="/" className="logo"><img  alt="" src="/images/logo.jpg"></img></Navbar.Brand>

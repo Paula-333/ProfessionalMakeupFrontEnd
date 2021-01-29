@@ -1,21 +1,21 @@
-
 import React, {useState } from 'react';
 import axios from 'axios';
 import { Container, Card, Form, Button, Alert} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+
 import './styles.scss';
 
 
 const Login = (props) => {
 
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     
     const history = useHistory();
 
     
-    //USANDO EL EMAIL PARA CONSEGUIR EL ID DEL USUARIO 
+    //··USANDO EL EMAIL PARA CONSEGUIR EL ID DEL USUARIO··//
     const getEmail = async ()=>{
         try{
             
@@ -25,31 +25,31 @@ const Login = (props) => {
             localStorage.setItem('user_id', res.data[0].id);
         }catch (error) {
             
-            console.log({message: 'ERROR'})
+            console.log({message: 'ERROR'});
         }
     }
     
-    //LOGIN
+    //··LOGIN··//
     const handleSubmit = async (event) => {
 
         try {
             event.preventDefault();
             setError('');
             const url = "http://127.0.0.1:8000/api/auth/login"
-            const res = await axios.post(url, {email,password})
+            const res = await axios.post(url, {email,password});
             localStorage.getItem('access_token');
-            localStorage.setItem('token',res.data.acess_token)
+            localStorage.setItem('token',res.data.acess_token);
             localStorage.setItem('email', email);
             setEmail(email);
             getEmail(); 
             history.push({
                 pathname:'/',
                 state: {update: true}
-            })
+            });
             
         } catch (error) {
-            setError('¡Oh! Ha habido algun problema...')
-            console.log('ERROR')
+            setError('¡Oh! Ha habido algun problema...');
+            console.log('ERROR');
            
         }
     }

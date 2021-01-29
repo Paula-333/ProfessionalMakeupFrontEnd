@@ -1,15 +1,15 @@
-
 import React from 'react';
 import axios from 'axios';
 import {Container, Card, Form, Button} from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
+
 import './styles.scss'
 
 
 const Appointment = () => {
     const history = useHistory();
 
-    //USANDO EL EMAIL PARA CONSEGUIR EL ID DEL USUARIO 
+    //··USANDO EL EMAIL PARA CONSEGUIR EL ID DEL USUARIO··//
     const getEmail = async ()=>{
         try{
             let email = localStorage.getItem('email');
@@ -17,7 +17,7 @@ const Appointment = () => {
             console.log(res);
             localStorage.setItem('user_id', res.data[0].id);
         }catch (error) {
-            console.log({message: 'ERROR'})
+            console.log({message: 'ERROR'});
         }
     }
 
@@ -25,7 +25,7 @@ const Appointment = () => {
 
     const handleSubmit = async (event) => {
 
-        //FUNCIÓN PARA DAR LOS VALORES AL CHECK
+        //··FUNCIÓN PARA DAR LOS VALORES AL CHECK··//
         let check = "";
 
         if(document.getElementById("1").checked){
@@ -45,7 +45,7 @@ const Appointment = () => {
             check = document.getElementById("4").value;
         }
 
-        //CREAR CITA
+        //··CREAR CITA··//
         try {
             event.preventDefault();
 
@@ -58,14 +58,13 @@ const Appointment = () => {
                 user_id: user_id,
             }
             console.log(appointment);
-            
             const url = "http://127.0.0.1:8000/api/auth/appointment"
-            await axios.post(url, appointment, {headers:{'Access-Control-Allow-Origin':'*'}})
+            await axios.post(url, appointment, {headers:{'Access-Control-Allow-Origin':'*'}});
+            console.log({message: 'Cita creada'});
+            history.push('/profile');
             
-            console.log({message: 'Cita creada'})
-            history.push('/profile')
         } catch (error) {
-            console.log({message: 'ERROR'})
+            console.log({message: 'ERROR'});
         }
 
     }

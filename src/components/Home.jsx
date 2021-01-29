@@ -1,6 +1,6 @@
-
 import React from 'react';
 import {Carousel, Container, Card, Button} from 'react-bootstrap';
+
 import './style.scss'
 
 
@@ -16,8 +16,7 @@ const Home = () => {
                 <img
                     className="d-block w-100"
                     src="/images/IMG_7641.jpg"
-                    alt="First slide"
-                    
+                    alt="First slide"  
                 />
                     <Carousel.Caption>
                         <h3>Maquillaje para Novia</h3>
@@ -78,8 +77,7 @@ const Home = () => {
                                     <br/>
                                     <br/>
                             </Card.Text>
-    
-                            
+          
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Servicios</Button>
                     <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/gallery">Trabajos</Button>
 

@@ -1,38 +1,37 @@
-import axios from 'axios';
 import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import {Container, Table, Button} from "react-bootstrap";
 
 import './styles.scss'
 
 const Profile = (props) => {
     
-    //props.setUser()
     let email = localStorage.getItem('email');
 
     const[dataProfile, setDataProfile]= useState([]);
     
 
-    //BORRAR CITA PASANDO PARAMETRO ID
+    //··BORRAR CITA PASANDO PARAMETRO ID··//
     const deleteAppointment = async(id) =>{
 
-        const res = await axios.get(`http://127.0.0.1:8000/api/auth/deleteAppointment/${id}`)
-        console.log(res)
-        //FILTER PARA QUE DESAPAREZCA LA CITA NADA MAS PULSAR EL BOTÓN
+        const res = await axios.get(`http://127.0.0.1:8000/api/auth/deleteAppointment/${id}`);
+        console.log(res);
+        //··FILTER PARA QUE DESAPAREZCA LA CITA NADA MAS PULSAR EL BOTÓN··//
         setDataProfile(dataProfile.filter(appo=> appo.id !== id)); 
     }
 
-    //TRAER DATOS DE PERFIL
+    //··TRAER DATOS DE PERFIL··//
    const getProfile = async () => {
         
         let userId = localStorage.getItem('user_id');
-        const res = await axios.get(`http://127.0.0.1:8000/api/auth/profile/${userId}`)
-        console.log(res)
-        setDataProfile(res.data)
+        const res = await axios.get(`http://127.0.0.1:8000/api/auth/profile/${userId}`);
+        console.log(res);
+        setDataProfile(res.data);
     }
 
     useEffect (()=>{
         getProfile();
-    },[])
+    },[]);
    
     return (    
 
@@ -72,7 +71,7 @@ const Profile = (props) => {
                         
                     </tr>
                 )
-            })}
+                })}
             </tbody>
         </Table>
             </Container>

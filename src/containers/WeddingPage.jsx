@@ -60,6 +60,5 @@ const WeddingPage = (props) => {
      </>
     );
   }
-  
-  
-  export default WeddingPage;
+   
+export default WeddingPage;

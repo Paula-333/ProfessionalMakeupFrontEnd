@@ -6,6 +6,7 @@ const Gallery = () => {
 
 
     return(
+        
         <div className={"mt-5"} >
 
           <Row md={4} >

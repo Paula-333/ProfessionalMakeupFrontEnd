@@ -1,7 +1,5 @@
-
 import React from 'react';
 import {Carousel, Container, Card, Button, OverlayTrigger, Tooltip} from 'react-bootstrap';
-
 
 
 const EventPage = (props) => {

@@ -11,8 +11,8 @@ const Header = (props) => {
     const history = useHistory();
     const location = useLocation();
     console.log(location)
-   let email = localStorage.getItem('email');
-   console.log(email)
+    let email = localStorage.getItem('email');
+    console.log(email)
 
     const logout = ()=>{
         localStorage.clear();
@@ -40,6 +40,13 @@ const Header = (props) => {
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/profile" >Perfil</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} href="/appointment" >Pedir Cita</Navbar.Brand>
                 <Navbar.Brand style={{ color: '#e9c5c7'}} onClick={logout}>Logout</Navbar.Brand>
+                </Navbar.Collapse>
+                <Navbar.Collapse  className="justify-content-end">
+                    <DropdownButton variant="outline-light"  id="dropdown-basic-button" title="MENU">
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/">Home</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/login">Login</Dropdown.Item>
+                        <Dropdown.Item style={{ color: '#883f4f'}} href="/signup">Sign Up</Dropdown.Item>
+                    </DropdownButton>
                 </Navbar.Collapse>
                     </>:
                     <>

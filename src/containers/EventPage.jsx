@@ -4,7 +4,7 @@ import {Carousel, Container, Card, Button, OverlayTrigger, Tooltip} from 'react-
 
 const EventPage = (props) => {
 
-    const user = props.user;
+    let email = localStorage.getItem('email');
 
     return (
      <>
@@ -47,7 +47,7 @@ const EventPage = (props) => {
                             Utilizaremos productos de alta calidad para garantizar resultados perfectos y larga duración del maquillaje para que no tengas que preocuparte de nada más que de disfrutar el momento.
                             <br/>
                             </Card.Text>
-                            {user?
+                            {email?
                                 <>
                                 <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
                                 <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>

@@ -3,7 +3,7 @@ import {Carousel, Container, Card, Button, OverlayTrigger, Tooltip} from 'react-
 
 const PromPage = (props) => {
 
-    const user = props.user;
+    let email = localStorage.getItem('email');
   
     return (
      <>
@@ -44,7 +44,7 @@ const PromPage = (props) => {
                             <br/>
                             </Card.Text>
 
-                            {user?
+                            {email?
                                 <>
                                 <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/services">Atrás</Button>    
                                 <Button variant="outline-light" style={{ backgroundColor:'#883f4f'}} href="/appointment">Pide Cita</Button>

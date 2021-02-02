@@ -44,10 +44,7 @@ const Services = () => {
                     </Card.Body>
             </Card>
         </Container>
-            
-            
-            
-           
+          
         </Container>
     )
 }

@@ -52,16 +52,16 @@ function App() {
             <Switch>
 
               <Route path="/" component={Home} exact/>
-              <Route path="/login" children={<Login user={user} setUser={setUser} /> } component={Login} exact/>
+              <Route path="/login" children={<Login user={user} setUser={setUser}/>} component={Login} exact/>
               <Route path="/signup" component={SignUp} exact/>
-              <Route path="/profile" children={<Profile user={user} setUser={setUser}/>} component={Profile} exact/>
+              <Route path="/profile" component={Profile} exact/>
               <Route path="/appointment" component={Appointment} exact/>
               <Route path="/services" component={Services} exact/>
               <Route path="/gallery" component={Gallery} exact/>
-              <Route path="/wedding-page" children={<WeddingPage user={user} setUser={setUser}/>} component={WeddingPage} exact/>
-              <Route path="/event-page"  children={<EventPage user={user} setUser={setUser}/>} component={EventPage} exact/>
-              <Route path="/prom-page" children={<PromPage user={user} setUser={setUser}/>} component={PromPage} exact/>
-              <Route path="/photoshoot-page" children={<PhotoshootPage user={user} setUser={setUser}/>} component={PhotoshootPage} exact/>
+              <Route path="/wedding-page" component={WeddingPage} exact/>
+              <Route path="/event-page" component={EventPage} exact/>
+              <Route path="/prom-page" component={PromPage} exact/>
+              <Route path="/photoshoot-page" component={PhotoshootPage} exact/>
 
             </Switch>
 

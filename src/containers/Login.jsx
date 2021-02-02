@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import './styles.scss';
 
 
-const Login = (props) => {
+const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

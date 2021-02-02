@@ -4,7 +4,7 @@ import {Container, Table, Button} from "react-bootstrap";
 
 import './styles.scss'
 
-const Profile = (props) => {
+const Profile = () => {
     
     let email = localStorage.getItem('email');
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Carousel, Container, Card, Button} from 'react-bootstrap';
 
-import './style.scss'
+import './styles.scss'
 
 
 const Home = () => {

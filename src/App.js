@@ -5,16 +5,16 @@ import { useState, useEffect, Fragment} from 'react';
 import axios from 'axios';
 import './App.scss'
 //···IMPORTAR COMPONENTES···//
-import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Services from './components/Services';
 import Gallery from './components/Gallery';
 //··IMPORTAR CONTAINERS··//
+import Home from './containers/Home';
 import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Profile from './containers/Profile';
 import Appointment from './containers/Appointment';
+import Services from './containers/Services';
 import WeddingPage from './containers/WeddingPage';
 import EventPage from './containers/EventPage';
 import PromPage from './containers/PromPage';

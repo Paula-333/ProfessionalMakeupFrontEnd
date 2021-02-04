@@ -2,7 +2,7 @@ import React from 'react';
 import {Carousel, Container, Card, Button, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 
-const WeddingPage = (props) => {
+const WeddingPage = () => {
 
     let email = localStorage.getItem('email');
   
